@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>PRACTICO#2 - 05/SC</title>
+  </head>
+
+  <body>
+    <header class="info">
+      <h1>
+        PRACTICO No2 TECNOLOGÍA WEB
+        <strong>GRUPO 05/SC</strong>
+      </h1>
+    </header>
+    <div id="students-container" class="container">
+      <!-- Students Cards List 😊-->
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/students.js"></script>
+    <script src="js/listeners.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script>
+      students.forEach(({ id, chart }) => {
+        let ctx = document.getElementById(`chart${id}`).getContext("2d");
+        new Chart(ctx, chart);
+      });
+    </script>
+  </body>
+</html>
